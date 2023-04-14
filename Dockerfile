@@ -15,23 +15,19 @@ ENV PATH=$RBENV_ROOT/bin:$RBENV_ROOT/shims:$PATH
 #
 
 RUN apt-get update -qq \
-  && apt-get install -y \
-  git \
-  curl \
-  build-essential \
-  libssl-dev  \
-  zlib1g-dev  \
-  curl  \
-  build-essential  \
-  libssl-dev  \
-  libreadline-dev  \
-  zlib1g-dev  \
-  libyaml-dev \
-  autoconf \
-  automake \
-  libtool \
-  tzdata \
-  && rm -rf /var/lib/apt/lists/*
+    && apt-get install -y \
+    git \
+    curl \
+    build-essential \
+    libssl-dev  \
+    zlib1g-dev  \
+    libreadline-dev  \
+    libyaml-dev \
+    autoconf \
+    automake \
+    libtool \
+    tzdata \
+    && rm -rf /var/lib/apt/lists/*
 
 #= nodenv
 RUN git clone https://github.com/nodenv/nodenv.git $NODENV_ROOT \
